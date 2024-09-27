@@ -1,8 +1,10 @@
 import discord
 from discord.ext import commands
 
+intents = discord.Intents.all()
+
 # Set your bot's prefix (e.g., "!")
-bot = commands.Bot(command_prefix="!")
+bot = commands.Bot(command_prefix="!", intents = intents)
 
 # Event: When the bot is ready
 @bot.event
