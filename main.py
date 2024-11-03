@@ -10,6 +10,7 @@ bot = commands.Bot(command_prefix="!", intents = intents)
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}!')
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Be back soon..."))
 
 # Command: !hello
 @bot.command()
